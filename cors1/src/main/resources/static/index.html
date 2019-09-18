@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div id="data"></div>
+<input type="button" onclick="getData()" value="点击获取跨域信息">
+<script>
+    function getData() {
+        $.get("http://localhost:8080/hello",function (msg) {
+            $("#data").html(msg);
+        })
+    }
+</script>
+</body>
+</html>
